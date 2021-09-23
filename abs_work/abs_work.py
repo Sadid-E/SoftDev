@@ -1,3 +1,8 @@
+# Sadid Ethun
+# SoftDev
+# AbsentWork/IntroToPython/Create lists of names using input and print random name 
+# 2021-09-22
+
 import random
 
 pd1 = []
@@ -18,12 +23,6 @@ def addToList():
 
     print("The student's name is " + name + " and their period is " + str(period) + ".")
 
-def printList():
-    all = []
-    all.extend(pd1)
-    all.extend(pd2)
-
-    print (all)
-
-# addToList()
-# printList()
+def printName():
+    all = pd1 + pd2
+    print (all[random.randrange(len(all))])
