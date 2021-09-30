@@ -1,0 +1,7 @@
+COMMENTS
+The other two people in my trio used addition instead of subtraction. They mulitplied all the numbers by 100 and used a random int. They then kept adding the percentages from 0 to the generated number. Some of us used a test function that picked a random job n number of times and added the amount of times it was picked to a dictionary. This let us compare out probabilities with the weights that we were given. Most of the differenced between trios are how chose the random number and how they weighted the percentages. Some trios used a small scale, while others used a large scael, and some added, while others subtracted. 
+
+QUESTIONS
+If using floats, should we round the number to 1 decimal place or would that not change the probability. 
+
+
