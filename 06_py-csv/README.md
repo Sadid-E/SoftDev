@@ -1,4 +1,4 @@
-# Ubun3 Shyne Choi, Aaron Contreras, Sadid Ethun K06 explanation
+# Ubun3 Shyne Choi, Aaron Contreras, Sadid Ethun K06 Explanation
 **File I/O:** We started by saving the csv file in the same directory, and we used the csv.reader to read the file and split up each line. This directly filtered through each line in the file, identifying the job and the percentage. We then stored the job/percentage pairs into a dictionary for later use. 
 
 **Dictionary:** Dictionaries are good for corresponding elements, and its structure allows for a quick reference to each value. To populate a dictionary, you must pair a key with a value. The value can be accessed with a known key.
