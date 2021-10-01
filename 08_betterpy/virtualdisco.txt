@@ -1,0 +1,23 @@
+Team Scooby Doo: Sadid Ethun, Oscar Wang, Ivan Mijacika
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity / Investigate command: $ python3 -m venv ~/myherozero
+2021-09-30
+
+What is?
+venv means virtul environment. It is a directory that contains a copy of python. 
+The directory comes with pip, allowing the user to download python libraries as well. 
+The command "$ python3 -m venv ~/myherozero" creates a virtual environment in the myherozero directory. 
+The myherozero/bin directory has all the pip and python directories. 
+
+Why use?
+Virtual environments allow the user to work on seaprate python projects without haveing to worry about using the right versions of libraries.
+Without virtual environments, the user might have to delete and redownload different versions of libraries. 
+
+How use?
+Virtual environments can be activated by running `$ source env/bin/activate`.
+Activating a virtual environment changes the $PATH of the terminal.
+To deactivate the virtual environment, run $ deactivate.
+
+Sources: 
+- https://docs.python.org/3/library/venv.html
+- https://realpython.com/python-virtual-environments-a-primer/
