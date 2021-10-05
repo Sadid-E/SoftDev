@@ -11,4 +11,6 @@ def hello_world():
     return "No hablo queso!"  # Q3: Will this appear anywhere? How u know?
 
 app.run()  # Q4: Where have you seen similar construcs in other languages?
-                
+
+# predictions: prints name in terminal
+# actual: prints __main__ after using the link and quittings

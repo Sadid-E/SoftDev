@@ -13,3 +13,9 @@ def hello_world():
 
 app.debug = True
 app.run()
+
+# predictions: In addition to v2, it will scan the code for bugs and print all bugs in the terminal
+# actual: printed 3 extra lines in the terminal:
+    # * Debugger is active!
+    # * Debugger PIN: 225-526-073
+    # * Restarting with stat

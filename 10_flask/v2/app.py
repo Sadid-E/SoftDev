@@ -13,3 +13,6 @@ def hello_world():
 
 app.run()
 
+# prediction:prints about to print __name__... and then __main__
+    # after quitting the program in the terminal
+# actual: we were right!! :)
