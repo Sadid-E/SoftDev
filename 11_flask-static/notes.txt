@@ -1,0 +1,5 @@
+Prediction: Accessing the file via http://localhost:5000/static/foo will open the foo.html file in the static directory. 
+
+Actual: Clicking the address makes us download the foo file. 
+On Firefox it opens the address bit displays nothing. On Chrome it only downloads the file. 
+If we change the ending of the address to foo.html.
