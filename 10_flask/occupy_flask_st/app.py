@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# ubun3: Shyne Choi, Aaron Contreras, Sadid Ethun
 # SoftDev
-# Oct 2021
+# K10 -- Putting Little Pieces Together / Flask Occupations / Print random occupation and list of occupations on the webpage
+# 2021-10-05
 
 import csv
 import random
@@ -11,14 +12,15 @@ app = Flask(__name__) #create instance of class Flask
 def open_file():
     # Opens file and formats into dictionary as Job Class: Percentage
 
-    with open('occupations.csv', newline='') as f:
+    with open('occupations.csv', newline = '') as f:
          reader = csv.reader(f)
          next(reader) #skips the first line
 
          occupations = {}
 
          for row in reader: #for each line in the file
-            occupations[row[0]] = float(row[1])
+            if row[0] != "Total":
+                occupations[row[0]] = float(row[1])
 
     return occupations
 
@@ -38,8 +40,23 @@ def get_random(di):
 @app.route("/")       #assign fxn to route
 
 def occupation_output():
-    return(get_random(open_file()))
+    occ_file = open_file() # make list of occupations, call it occ_file
 
-if __name__ == "__main__":  # true if this file NOT imported
-    app.debug = True        # enable auto-reload upon code change
-    app.run()
+    # x is the string we'll be returning aka what will be on the link
+    x = "<header><h3>ubun3: Shyne Choi, Aaron Contreras, Sadid Ethun</h3><br></header>"
+
+    # start ul
+    x += "<body style='font-family:arial;background-color:powderblue;'><b>Random Occupation: </b>" + get_random(occ_file) + "<br><br><br>" + "<b>List of Occupations:</b><ul>"
+
+    # for each key in the list of occupations made earlier, we'll add it to x
+    for key in occ_file:
+        x += "<li>" + key + "</li>"
+
+    # finish the unordered list (that's what ul stands for)
+    x += "</ul></body>"
+
+    return(x)
+
+
+app.debug = True        # enable auto-reload upon code change
+app.run()
