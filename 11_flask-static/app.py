@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# ubun3: Shyne Choi, Aaron Contreras, Sadid Ethun
 # SoftDev
-# Oct 2021 
+# K11 -- Some Things Never Change / Static Flask
+# 2021-10-06
 
 # DEMO 
 # basics of /static folder
