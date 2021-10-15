@@ -27,7 +27,7 @@
     alt="Cookie" width="50" heigh="50">
     <br><br>
     <b>Username Entered:</b>
-    {{ request.args['username'] }}
+    {{ request.args['username'] }} <!-- This can also be done through app.py by storing it as a variable in python and sending it to the html as another field in render_template -->
     <br><br>
     <b>Request Method Used:</b>
     {{ request.method }}
