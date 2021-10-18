@@ -27,15 +27,14 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
-    print(app)
+    print(app) 
     print("***DIAG: request obj ***")
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
+    # renders the login.html file when the user goes to the website
     return render_template( 'login.html' )
 
 
@@ -43,16 +42,17 @@ def disp_loginpage():
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
-    print(app)
+    print(app) # prints the name of the file
     print("***DIAG: request obj ***")
-    print(request)
+    print(request) # prints the link and request method
     print("***DIAG: request.args ***")
-    print(request.args)
+    print(request.args) # prints the dictionary of usernames and submits
     print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    print(request.args['username']) # prints the username from the dictionary
     print("***DIAG: request.headers ***")
-    print(request.headers)
-    return render_template( 'response.html' ) #response to a form submission
+    print(request.headers) # prints information about the host, the browser, and operating system
+    # renders the response.html file after the user has submitted the form
+    return render_template( 'response.html', username=request.args['username'], method=request.method ) #response to a form submission
 
 
     
