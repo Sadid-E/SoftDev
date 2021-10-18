@@ -1,7 +1,7 @@
 # Text Box -- Sadid Ethun, Aaron Contreras, Gavin McGinley
 # SoftDev
-# K14 -- Form and Function / Flask Form App
-# 2021-10-14
+# K15 -- Sessions Greetings / Flask Form and Error Handling
+# 2021-10-18
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -12,8 +12,8 @@ from flask import request           #facilitate form submission
 
 app = Flask(__name__)    #create Flask object
 
-username = sethun20
-password = hello
+user = 'sethun20'
+pwd = 'hello'
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
@@ -23,7 +23,8 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    return render_template( 'response.html', username=request.args['username'], method=request.method ) #response to a form submission
+    if (request.args['username'] == user and request.args['password'] == pwd):
+        return render_template( 'welcome.html', username=request.args['username'], method=request.method, password=request.args['password']) #response to a form submission
 
 
 

@@ -2,17 +2,8 @@
 <!-- 
   # Text Box -- Sadid Ethun, Aaron Contreras, Gavin McGinley
   # SoftDev
-  # K14 -- Form and Function / Flask Form App
-  # 2021-10-14
-
-     simple demo of HTML forms via Flask
-     
-     trioTASK:
-     If any member of team has forms experience, let their know-how osmote.
-     If no one does, seek external assistance.
-     PROTIP: Revisit code from intro if you have it.
-     Peruse this code together and discuss how it should work, in conjunction with the back end apparatus.
-    
+  # K15 -- Sessions Greetings / Flask Form and Error Handling
+  # 2021-10-18
  -->
 
 
@@ -32,10 +23,13 @@
 
 
     <h3>
-      Enter your username below to proceed.
+      Enter your username and password below to proceed.
     </h3>
     <form action="/auth"> <!-- This tells app.py the route to go to after the request is handled -->
-      <input type="text" name="username">
+      <input type="text" name="username" placeholder="username">
+      <br>
+      <input type="text" name="password" placeholder="password">
+      <br>
       <input type="submit" name="sub1">
     </form>
     <br>
