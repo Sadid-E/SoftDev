@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- 
+  # Text Box -- Sadid Ethun, Aaron Contreras, Gavin McGinley
+  # SoftDev
+  # K14 -- Form and Function / Flask Form App
+  # 2021-10-14
+ -->
+
+
+<html>
+
+  <head>
+    <title> RESPONSE PAGE </title>
+  </head>
+
+  <body style="background-color:powderblue;">
+    <h2>
+      Text Box: Sadid Ethun, Aaron Contreras, Gavin McGinley
+    </h2>
+    <p>
+      <h1>
+        Greetings {{ username }}! You have successfully submitted the form. 
+      </h1>
+      <b>
+        Username Entered:
+      </b>
+      {{ username }} <!-- This can also be done through app.py by storing it as a variable in python and sending it to the html as another field in render_template -->
+      <br><br>
+      <b>
+        Request Method Used:
+      </b>
+      {{ method }}
+      <br><br>
+    </p>
+    <br>
+  </body>
+
+</html>

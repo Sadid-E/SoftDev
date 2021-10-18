@@ -1,0 +1,3 @@
+Notes:
+
+The GET request method stores the data in the URL while the POST method doesn't.
