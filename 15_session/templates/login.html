@@ -25,14 +25,14 @@
     <h3>
       Enter your username and password below to proceed.
     </h3>
-    <form action="/auth"> <!-- This tells app.py the route to go to after the request is handled -->
+    <form action="/auth" method="post"> <!-- This tells app.py the route to go to after the request is handled -->
       <input type="text" name="username" placeholder="username">
       <br>
       <input type="text" name="password" placeholder="password">
       <br>
       <input type="submit" name="sub1">
     </form>
-    <br>
+    <p style="color:red;"> <b>{{k}}</b></p>
   </body>
 
 </html>

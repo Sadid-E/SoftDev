@@ -7,10 +7,10 @@ GET VS POST
 The GET request method stores the data in the URL while the POST method doesn't. 
 GET is used to request data, while POST is used to send data to the server. 
 
-COOKIES
+SESSION
 Flask session object is essentially just a python dictionary that works across multiple runs of the app. It can be treated
 like a dictionary, but can store logins and other user-inputted data locally.
 
 HTML Forms:
-request.args dictionary is created at the point of form submission, so it can't be accessed earlier in any way
-
+If method is GET, request.args dictionary is created at the point of form submission, so it can't be accessed earlier in any way.
+If method is POST, request.form dictionary is created.
