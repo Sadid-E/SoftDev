@@ -12,13 +12,13 @@ from flask import session
 #from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
-app.secret_key= "stuff"  #pretty good huh
+app.secret_key= os.urandom(32)  #pretty good huh
 
 #only current login is sethun20 with password set as hello
 user = 'sethun20'
 pwd = 'hello'
 
-@app.route("/" , methods=['GET', 'POST']) 
+@app.route("/" , methods=['GET', 'POST'])
 def disp_loginpage():
     #sends to response page if user is signed in
     if session:
@@ -27,7 +27,7 @@ def disp_loginpage():
     #else sends to login page
     return render_template( 'login.html' )
 
-@app.route("/auth" , methods=['GET', 'POST']) 
+@app.route("/auth" , methods=['GET', 'POST'])
 def authenticate():
     #signs in if password is right
     if (request.form['username'] == user and request.form['password'] == pwd):
@@ -41,7 +41,7 @@ def authenticate():
     else:
         return render_template('login.html', k="Incorrect Password for "+request.form['username'])
 
-@app.route('/logout' , methods=['GET', 'POST']) 
+@app.route('/logout' , methods=['GET', 'POST'])
 #clears session
 def logout():
     session.pop('username')
