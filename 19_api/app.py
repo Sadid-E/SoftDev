@@ -1,13 +1,15 @@
 from flask import Flask
+from flask import render_template
 import requests
 
 app = Flask(__name__) #create instance of class Flask
 
 @app.route("/")       #assign fxn to route
-def nasa():
+def image():
     r = requests.get("https://api.nasa.gov/planetary/apod?api_key=CpxWFgxsaXpvNJ0ReQFhG7LpydiwYW569yQljz9p")
-    print(r.json())
-    return(r.json()["url"])
+    url = r.json()["url"]
+    print(url)
+    return render_template("main.html", image=url)
 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
