@@ -1,0 +1,38 @@
+/*  Sadid Ethun
+    SoftDev
+    K18 -- Comic Sans Syndrome/CSS Styling/Recreating a CSS styling using inline, internal, and external CSS.
+    2021-11-22
+    time spent: 1.5
+*/
+
+html {
+    background-color: #737373;
+}
+body {
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    background-color: silver;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+footer {
+    background-color: dimgray;
+    text-align: right;
+    color: gray;
+    padding: 5px;
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
