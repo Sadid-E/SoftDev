@@ -1,3 +1,9 @@
+# Sadid Ethun
+# SoftDev
+# K19 -- A RESTful Journey Skyward/Restful API/Creating a flask app using a NASA API. 
+# 2021-11-23
+# time spent: 0.5 
+
 from flask import Flask
 from flask import render_template
 import requests
