@@ -1,5 +1,6 @@
+DISCO:
+- Flex can be used to align elements and make tables.
+
 Q0:
 Used a link in their notes.txt to further understand flex. 
 (https://getbootstrap.com/docs/5.1/utilities/flex/)
-
-- Flex can be used to align elements and make tables.
