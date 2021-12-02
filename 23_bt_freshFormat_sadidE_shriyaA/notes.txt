@@ -4,3 +4,6 @@ DISCO:
 Q0:
 Used a link in their notes.txt to further understand flex. 
 (https://getbootstrap.com/docs/5.1/utilities/flex/)
+
+Q1:
+Although both frameworks are similar, I prefer bootstrap because I like the styling more and it seems easier to use. 
