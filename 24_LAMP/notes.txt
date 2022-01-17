@@ -1,0 +1,7 @@
+ NOTES:
+ 
+ Key error when trying to ssh into root. Had to sllow password authentication in the sshd_config file.
+ Fixed using steps from: https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh.
+
+ Configuration error when setting up domain. Had to add a ServerName directive to the Apache configuration.
+ Fixed using steps from: https://www.digitalocean.com/community/tutorials/apache-configuration-error-ah00558-could-not-reliably-determine-the-server-s-fully-qualified-domain-name.
