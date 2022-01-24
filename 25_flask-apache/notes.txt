@@ -1,0 +1,8 @@
+When cloning the Git repository, we needed to use sudo which is something the sheet didn't reference. 
+
+When installing python-pip, we recieved an error. To fix this error we installed python3-pip. A seemingly insignificant but important distinction. 
+In order to run project code, we needed to install flask AS WELL as our requirements, needed to use sudo to install.
+
+In order to run FlaskApp we needeed to run systemctl reload apache2
+
+Does chmod -x make a file executable? 
