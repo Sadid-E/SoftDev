@@ -1,0 +1,17 @@
+Team Twizzy :: Sadid Ethun, Theo Fahey
+SoftDev pd2
+K27 -- Basic functions in JavaScript
+2022-02-04
+
+DISCO
+-----------------------------------------------------------------
+* Ooooh, the body for the JS functions use the same syntax as Java.
+* Aaah-haa! Scheme uses prefix noation!
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* Why...?
+* Huh?
+* Whuh now?
+=================================================================
