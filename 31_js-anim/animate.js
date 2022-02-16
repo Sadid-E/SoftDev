@@ -21,35 +21,39 @@ ctx.fillStyle = "purple";
 
 var requestID;  //init global var for use with animation frames
 
-
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
    
   // YOUR CODE HERE
-  ctx.clearRect(0, 0, c.width, c.height)
-};
+  ctx.clearRect(0, 0, c.width, c.height);
+}
 
 
 var radius = 0;
 var growing = true;
 
-
 //var drawDot = function() {
 var drawDot = () => {
-    console.log("drawDot invoked...")
+    console.log("drawDot invoked...");
 
   // YOUR CODE HERE
     if (radius > c.width/2) {
         growing = false;
     }
     while(growing){
+      if (radius > c.width/2-1) {
+        growing = false;
+      }
+        console.log(radius);
         ctx.beginPath();
         ctx.arc(c.width/2, c.height/2, radius, 0, 360);
         ctx.fill();
         radius++;
-        clear();
+        // clear();
     }
+    requestID = window.requestAnimationFrame(drawDot);
+    window.cancelAnimationFrame(requestID);
   /*
     ...to
     Wipe the canvas,
@@ -62,13 +66,12 @@ var drawDot = () => {
     window.requestAnimationFrame()
 
    */
-};
-
+}
 
 //var stopIt = function() {
 var stopIt = () => {
-  console.log("stopIt invoked...")
-  console.log( requestID );
+  console.log("stopIt invoked...");
+  //console.log( requestID );
 
   // YOUR CODE HERE
   /*
@@ -78,7 +81,8 @@ var stopIt = () => {
     You will need
     window.cancelAnimationFrame()
   */
-};
+  window.cancelAnimationFrame(requestID);
+}
 
 
 dotButton.addEventListener( "click", drawDot );
