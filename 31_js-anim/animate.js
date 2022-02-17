@@ -24,7 +24,7 @@ var requestID;  //init global var for use with animation frames
 //var clear = function(e) {
 var clear = (e) => {
   console.log("clear invoked...")
-   
+
   // YOUR CODE HERE
   ctx.clearRect(0, 0, c.width, c.height);
 }
@@ -36,35 +36,43 @@ var growing = true;
 //var drawDot = function() {
 var drawDot = () => {
     console.log("drawDot invoked...");
-
+    clear();
   // YOUR CODE HERE
-    if (radius > c.width/2) {
-        growing = false;
-    }
-    while(growing){
+
+    if (growing){
+
+
       if (radius > c.width/2-1) {
         growing = false;
       }
-        console.log(radius);
-        ctx.beginPath();
-        ctx.arc(c.width/2, c.height/2, radius, 0, 360);
-        ctx.fill();
-        radius++;
-        // clear();
+      radius++;
     }
-    requestID = window.requestAnimationFrame(drawDot);
-    window.cancelAnimationFrame(requestID);
+    else {
+      if (radius <= 1){
+        growing = true;
+      }
+      radius--;
+    }
+    ctx.beginPath();
+    ctx.arc(c.width/2, c.height/2, radius, 0, 360);
+    ctx.fill();
+
+
+
+      //window.cancelAnimationFrame(requestID);
+
+        requestID = window.requestAnimationFrame(drawDot);
+
+
   /*
     ...to
     Wipe the canvas,
     Repaint the circle,
-
     ...and somewhere (where/when is the right time?)
     Update requestID to propagate the animation.
     You will need
     window.cancelAnimationFrame()
     window.requestAnimationFrame()
-
    */
 }
 
@@ -77,7 +85,6 @@ var stopIt = () => {
   /*
     ...to
     Stop the animation
-
     You will need
     window.cancelAnimationFrame()
   */
