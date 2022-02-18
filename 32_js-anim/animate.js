@@ -36,7 +36,8 @@ var growing = true;
 
 //var drawDot = function() {
 var drawDot = () => {
-    console.log("drawDot invoked...");
+  window.cancelAnimationFrame(requestID);
+  console.log("drawDot invoked...");
     clear();
   // YOUR CODE HERE
 
@@ -84,6 +85,7 @@ var imgY = Math.random() * (c.height/2 +100);
 var logo = document.getElementById("dvd");
 
 var drawLogo = () => {
+    window.cancelAnimationFrame(requestID);
     clear();
     if (imgX >= c.width-75 || imgX <= 0) {
         xGrowing = !xGrowing;
