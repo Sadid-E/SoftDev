@@ -1,0 +1,6 @@
+Team Twizzy :: Theo Fahey, Sadid Ethun
+SoftDev pd2
+K28 -- Domfoolery
+2022-02-07r
+* Must call functions in developer console
+* Recursion works really quickly
